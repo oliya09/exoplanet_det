@@ -25,13 +25,6 @@ $$
 $$
 
   From this, the planet radius can be determined if the star's radius is known.
-
-* **Transit duration:** depends on the orbital period $P$, stellar radius $R_*$, orbital semi-major axis $a$, orbital inclination $i$, and impact parameter $b$. Approximate formula for full transit duration:
-
-$$
-   T \approx \frac{P}{\pi} \arcsin\left( \frac{R_*}{a} \frac{\sqrt{(1 + k)^2 - b^2}}{\sin i} \right), \ \ \text{where } k = R_p/R_*
-$$
-
 * **Periodic dips:** repeated, identical dips in the light curve reveal the orbital period.
 
 ### What can be measured from transit
