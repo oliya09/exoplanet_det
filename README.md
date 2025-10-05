@@ -67,8 +67,10 @@ The planet and star orbit their common center of mass. The star’s orbital moti
 
 * **Doppler shift:**
 
-$$ \frac{\Delta \lambda}{\lambda} = \frac{v_{rad}}{c}, 
 $$ 
+\frac{\Delta \lambda}{\lambda} = \frac{v_{rad}}{c}, 
+$$ 
+
 where $v_{rad}$ is the star’s radial velocity.
 
 * **Signal semi-amplitude (K):**
