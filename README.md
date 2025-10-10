@@ -97,7 +97,7 @@ From purely photometric data, several quantities can be derived:
 | Planetary radius | $R_p$ | $\delta = (R_p / R_*)^2$ | Planet size relative to the star |
 | Orbital period | $P$ | Repetition of transits | Time for one complete orbit |
 | Orbital distance | $a$ | Kepler’s 3rd law | Mean separation between star and planet |
-| Orbital inclination |$ i$ | Transit shape | Tilt of orbital plane |
+| Orbital inclination |$i$ | Transit shape | Tilt of orbital plane |
 | Transit duration | $T_d$ | Light curve width | Duration of the transit event |
 
 
@@ -129,7 +129,6 @@ These periodic shifts in the star’s spectral lines indicate the presence of an
 
 <video width="640" height="360" controls>
   <source src="images/radial_velocity-1.mp4" type="video/mp4">
-  Your browser does not support the video tag.
 </video>
 
 
@@ -143,7 +142,7 @@ $$
 $$
 
 where:  
-- $\Delta \lambd$ — wavelength change  
+- $\Delta \lambda$ — wavelength change  
 - $\lambda_0$ — rest wavelength  
 - $v_r$ — radial velocity  
 - $c$ — speed of light  
@@ -257,4 +256,3 @@ You can view the full business plan at the following link:
 
 The use of transit and radial velocity data in conjunction provides the most complete picture of exoplanets.  
 Our pipeline uses these NASA datasets to detect exoplanets automatically, contributing to astronomical research and democratizing access to space science through data-driven platforms.
-

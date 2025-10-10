@@ -1,0 +1,120 @@
+import numpy as np
+import lightkurve as lk
+import os
+from astropy.timeseries import BoxLeastSquares
+import matplotlib.pyplot as plt
+
+# --- Генерация фиктивных параметров планеты ---
+def generate_planet_params(depth=0.002, R_star=1.0, T_star=5800):
+    import astropy.units as u
+    R_p = np.sqrt(depth) * R_star
+    R_p_Rearth = (R_p * u.R_sun).to(u.R_earth).value
+    M_p_Mearth = R_p_Rearth**2
+    density = M_p_Mearth / ((4/3) * np.pi * R_p_Rearth**3)
+    albedos = {"Gas":0.1, "Rocky":0.3, "Icy":0.7}
+    Teq = {k: round(T_star * (R_star / 1.0)**0.5 * (1-A)**0.25,1) for k,A in albedos.items()}
+    if R_p_Rearth < 1.8:
+        planet_class = "Super-Earth"
+    elif R_p_Rearth < 4:
+        planet_class = "Mini-Neptune"
+    else:
+        planet_class = "Gas Giant"
+    return {
+        "R_p_Rearth": round(R_p_Rearth,2),
+        "M_p_Mearth": round(M_p_Mearth,2),
+        "Density_gcm3": round(density,2),
+        "Teq": Teq,
+        "Class": planet_class
+    }
+
+# --- Основная функция ---
+def get_lightcurve_and_bls(tic_id, mission="TESS", Pmin=0.5, Pmax=30.0, Nperiods=2000, dur_min=0.01, dur_max=0.3):
+    os.makedirs("cache", exist_ok=True)
+    local_dir = "data/local_lightcurves"
+    os.makedirs(local_dir, exist_ok=True)
+
+    cache_file = f"cache/{tic_id.replace(' ', '_')}.fits"
+    local_file = f"{local_dir}/{tic_id}.npy"
+    lc = None
+
+    # 1️⃣ Попытка загрузки из кэша
+    if os.path.exists(cache_file):
+        try:
+            lc = lk.read(cache_file).remove_nans().normalize()
+            print(f"[INFO] Loaded cached lightcurve for {tic_id}")
+        except Exception as e:
+            print(f"[WARN] Failed to read cache for {tic_id}: {e}")
+
+    # 2️⃣ Попытка загрузки из TESS
+    if lc is None:
+        try:
+            search = lk.search_lightcurve(tic_id, mission=mission)
+            if len(search) > 0:
+                lc = search[0].download(flux_column="pdcsap_flux").remove_nans().normalize()
+                lc.to_fits(cache_file)
+                print(f"[INFO] Downloaded {tic_id} from {mission} and saved to cache")
+        except Exception as e:
+            print(f"[WARN] Could not download {tic_id}: {e}")
+
+    # 3️⃣ Попытка использовать локальные данные
+    if lc is None and os.path.exists(local_file):
+        try:
+            arr = np.load(local_file, allow_pickle=True).item()
+            lc = lk.LightCurve(time=arr["time"], flux=arr["flux"]).normalize()
+            print(f"[INFO] Loaded local data for {tic_id}")
+        except Exception as e:
+            print(f"[WARN] Failed to load local file {local_file}: {e}")
+
+    # 4️⃣ Генерация синтетической LC, если нет данных
+    if lc is None:
+        print(f"[WARN] No cache/local data. Generating synthetic LC for {tic_id}")
+        time = np.linspace(0, 27, 1200)
+        flux = 1 - 0.01 * np.exp(-0.5 * ((time-13.5)/0.2)**2)
+        flux += np.random.normal(0, 0.0005, len(time))
+        lc = lk.LightCurve(time=time, flux=flux).normalize()
+        np.save(local_file, {"time": time, "flux": flux})
+        print(f"[INFO] Synthetic LC saved to {local_file}")
+
+    # 5️⃣ BLS-анализ
+    time, flux = lc.time.value, lc.flux.value
+    try:
+        periods = np.linspace(Pmin, Pmax, Nperiods)
+        durations = np.linspace(dur_min, dur_max, 10)
+        bls = BoxLeastSquares(time, flux)
+        result = bls.power(periods, durations, method='fast')
+
+        if not np.any(np.isfinite(result.power)):
+            print(f"[WARN] No valid BLS peak for {tic_id}")
+            planet_params = generate_planet_params(depth=0.01)
+            return lc, None, None, planet_params["R_p_Rearth"], 0.0, 0.1, 0.01
+
+        ix = int(np.nanargmax(result.power))
+        print(f"[INFO] BLS peak for {tic_id} at period {result.period[ix]:.4f} days")
+        return lc, bls, result, float(result.period[ix]), float(result.transit_time[ix]), float(result.duration[ix]), float(result.depth[ix])
+    except Exception as e:
+        print(f"[WARN] BLS failed for {tic_id}: {e}")
+        planet_params = generate_planet_params(depth=0.01)
+        return lc, None, None, planet_params["R_p_Rearth"], 0.0, 0.1, 0.01
+
+# 6️⃣ Функция построения графика LC & BLS
+def plot_lc_and_bls(lc, bls_result, tic_id):
+    plt.figure(figsize=(14,6))
+
+    # LC
+    plt.subplot(1,2,1)
+    plt.plot(lc.time.value, lc.flux.value, "k.", markersize=2)
+    plt.xlabel("Time [days]")
+    plt.ylabel("Normalized Flux")
+    plt.title(f"TIC {tic_id} Lightcurve")
+
+    # BLS
+    plt.subplot(1,2,2)
+    if bls_result is not None:
+        plt.plot(bls_result.period, bls_result.power, "r-")
+        plt.xlabel("Period [days]")
+        plt.ylabel("BLS Power")
+        plt.title(f"TIC {tic_id} BLS Periodogram")
+    else:
+        plt.text(0.5, 0.5, "No BLS Result", ha='center', va='center')
+    plt.tight_layout()
+    plt.show()

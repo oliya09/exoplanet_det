@@ -1,0 +1,98 @@
+import numpy as np
+import lightkurve as lk
+import os
+from astropy.timeseries import BoxLeastSquares
+from astroquery.mast import Catalogs
+
+def get_lightcurve_and_bls(
+    tic_id,
+    missions=("TESS", "Kepler", "K2"),
+    Pmin=0.5,
+    Pmax=30.0,
+    Nperiods=2000,
+    dur_min=0.02,
+    dur_max=0.2,
+    use_cache=True
+):
+    os.makedirs("cache", exist_ok=True)
+    cache_file = f"cache/{str(tic_id).replace(' ', '_')}.fits"
+    lc = None
+
+    # ✅ Проверяем кеш
+    if use_cache and os.path.exists(cache_file):
+        try:
+            lc = lk.read(cache_file).remove_nans().normalize()
+            print(f"[INFO] Loaded cached lightcurve for {tic_id}")
+        except Exception as e:
+            print(f"[ERROR] Failed to read cached file for {tic_id}: {e}")
+
+    # ✅ Ищем по миссиям
+    if lc is None:
+        for mission in missions:
+            try:
+                search = lk.search_lightcurve(tic_id, mission=mission, exptime=120)
+                if len(search) > 0:
+                    print(f"[INFO] Found data for {tic_id} in {mission}")
+                    lc = search[0].download(flux_column="pdcsap_flux").remove_nans().normalize()
+                    lc.to_fits(cache_file)
+                    break
+            except Exception as e:
+                print(f"[WARN] Search in {mission} failed for {tic_id}: {e}")
+
+    # ✅ Ищем по координатам
+    if lc is None:
+        try:
+            print(f"[INFO] Attempting coordinate lookup for {tic_id}...")
+            Catalogs.TIMEOUT = 10
+            catalog_data = Catalogs.query_object(tic_id, catalog="TIC")
+            if len(catalog_data) > 0:
+                ra, dec = catalog_data[0]["ra"], catalog_data[0]["dec"]
+                print(f"[INFO] Found coordinates for {tic_id}: RA={ra:.3f}, DEC={dec:.3f}")
+                search = lk.search_lightcurve(f"{ra} {dec}", radius=0.05)
+                if len(search) > 0:
+                    print(f"[INFO] Found data for {tic_id} by coordinates.")
+                    lc = search[0].download().remove_nans().normalize()
+                    lc.to_fits(cache_file)
+                else:
+                    print(f"[WARN] No lightcurve found near coordinates {ra:.3f}, {dec:.3f}")
+        except Exception as e:
+            print(f"[WARN] Coordinate search failed for {tic_id}: {e}")
+
+    if lc is None:
+        print(f"[ERROR] No lightcurve found for {tic_id} — skipping.")
+        return None, None, None, None, None, None, None
+
+    # ✅ Убираем NaN
+    time, flux = lc.time.value, lc.flux.value
+    if np.all(np.isnan(flux)):
+        print(f"[WARN] All flux values are NaN for {tic_id}")
+        return None, None, None, None, None, None, None
+
+    # ✅ Прореживаем данные
+    lc = lc.bin(time_bin_size=0.01)
+    time, flux = lc.time.value, lc.flux.value
+
+    # ✅ BLS-анализ
+    print(f"[INFO] Running BLS analysis for {tic_id}...")
+    periods = np.linspace(Pmin, Pmax, Nperiods)
+    durations = np.linspace(dur_min, dur_max, 5)
+
+    bls = BoxLeastSquares(time, flux)
+    result = bls.power(periods, durations, method='fast')
+
+    if not np.any(np.isfinite(result.power)):
+        print(f"[WARN] Invalid BLS power array for {tic_id}")
+        return lc, bls, result, periods[0], time[0], durations[0], 0.0
+
+    ix = int(np.nanargmax(result.power))
+    print(f"[INFO] BLS peak found for {tic_id} at period {result.period[ix]:.4f} days")
+
+    return (
+        lc,
+        bls,
+        result,
+        float(result.period[ix]),
+        float(result.transit_time[ix]),
+        float(result.duration[ix]),
+        float(result.depth[ix]),
+    )
