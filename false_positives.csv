@@ -1,0 +1,33 @@
+ID,Status,Period,Depth,ML_score,Hybrid_score,Checks,Reason,Explain,lc
+TIC 281940623,Likely False Positive,3.416770963704631,0.00022505371379960158,0.5,0.57,"{'odd_even': 'consistent', 'odd_even_score': 1.0, 'secondary': 'strong', 'secondary_score': 0.0, 'centroid': 'ok', 'centroid_score': 1.0, 'depth': 'reasonable', 'depth_score': 1.0, 'rv': 'ok', 'rv_score': 1.0}",Low confidence,ML=0.50; Odd/even=consistent; Secondary=strong; Centroid=ok; Depth=reasonable. → Overall score=0.57,"        time                flux        flux_err
+                                                
+-------------------- ------------------ --------
+                 0.0 1.0004623593510324      nan
+0.022518765638031693 1.0003582407482385      nan
+0.045037531276063386  1.000448070047226      nan
+ 0.06755629691409508 0.9990600490834284      nan
+ 0.09007506255212677  1.000446963500509      nan
+                 ...                ...      ...
+  26.887406171809843 1.0003748512977835      nan
+  26.909924937447872 0.9997887680403514      nan
+  26.932443703085905 0.9999377881370676      nan
+  26.954962468723938 0.9995302960925599      nan
+  26.977481234361967 1.0005226870969723      nan
+                27.0 0.9999656231578615      nan
+Length = 1200 rows"
+TIC 439581206,Likely False Positive,0.5,0.00015396559604932222,0.5,0.58,"{'odd_even': 'consistent', 'odd_even_score': 1.0, 'secondary': 'strong', 'secondary_score': 0.0, 'centroid': 'ok', 'centroid_score': 1.0, 'depth': 'reasonable', 'depth_score': 1.0, 'rv': 'ok', 'rv_score': 1.0}",Low confidence,ML=0.50; Odd/even=consistent; Secondary=strong; Centroid=ok; Depth=reasonable. → Overall score=0.58,"        time                flux        flux_err
+                                                
+-------------------- ------------------ --------
+                 0.0 1.0004341218282427      nan
+0.022518765638031693 0.9998603013942158      nan
+0.045037531276063386  1.000892992993422      nan
+ 0.06755629691409508  1.000051238548001      nan
+ 0.09007506255212677 0.9999174655563922      nan
+                 ...                ...      ...
+  26.887406171809843 1.0000741163927498      nan
+  26.909924937447872 0.9997956255740986      nan
+  26.932443703085905 0.9999016331371936      nan
+  26.954962468723938 0.9997527068833812      nan
+  26.977481234361967 0.9998960193078459      nan
+                27.0 1.0006440992544265      nan
+Length = 1200 rows"

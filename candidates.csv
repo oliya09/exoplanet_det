@@ -1,0 +1,275 @@
+ID,Status,Period,Depth,ML_score,Hybrid_score,Checks,Reason,Explain,lc,Score
+TIC 458392017,Candidate,6.185857321652065,0.0015891277676968593,0.5,0.74,"{'odd_even': 'consistent', 'odd_even_score': 1.0, 'secondary': 'weak', 'secondary_score': 1.0, 'centroid': 'ok', 'centroid_score': 1.0, 'depth': 'reasonable', 'depth_score': 1.0, 'rv': 'ok', 'rv_score': 1.0}",Moderate confidence,ML=0.50; Odd/even=consistent; Secondary=weak; Centroid=ok; Depth=reasonable. → Overall score=0.74,"        time                flux        flux_err
+                                                
+-------------------- ------------------ --------
+                 0.0 0.9994529628944402      nan
+0.022518765638031693 1.0002874655399963      nan
+0.045037531276063386 0.9996625224356946      nan
+ 0.06755629691409508 1.0002579021681928      nan
+ 0.09007506255212677 0.9997078558179505      nan
+                 ...                ...      ...
+  26.887406171809843 0.9997532380971823      nan
+  26.909924937447872 1.0004406678362805      nan
+  26.932443703085905 0.9995847225656425      nan
+  26.954962468723938 1.0006522963448061      nan
+  26.977481234361967 1.0008776082221453      nan
+                27.0   1.00074948915124      nan
+Length = 1200 rows",
+TIC 540038274,Candidate,5.041301627033793,0.010076899461747576,0.5,0.76,"{'odd_even': 'consistent', 'odd_even_score': 1.0, 'secondary': 'weak', 'secondary_score': 1.0, 'centroid': 'ok', 'centroid_score': 1.0, 'depth': 'reasonable', 'depth_score': 1.0, 'rv': 'ok', 'rv_score': 1.0}",Moderate confidence,ML=0.50; Odd/even=consistent; Secondary=weak; Centroid=ok; Depth=reasonable. → Overall score=0.76,"        time                flux        flux_err
+                                                
+-------------------- ------------------ --------
+                 0.0 1.0002088128772189      nan
+0.022518765638031693 0.9995796101529953      nan
+0.045037531276063386 1.0005064275157083      nan
+ 0.06755629691409508 1.0000705493278166      nan
+ 0.09007506255212677 1.0002412384157804      nan
+                 ...                ...      ...
+  26.887406171809843  1.000044841161215      nan
+  26.909924937447872 0.9998819474930146      nan
+  26.932443703085905  1.000052077931759      nan
+  26.954962468723938 1.0002439649629618      nan
+  26.977481234361967   0.99889760993227      nan
+                27.0  1.000876145033456      nan
+Length = 1200 rows",
+TIC 120384930,Candidate,15.268460575719649,0.0101951405335444,0.5,0.78,"{'odd_even': 'consistent', 'odd_even_score': 1.0, 'secondary': 'weak', 'secondary_score': 1.0, 'centroid': 'ok', 'centroid_score': 1.0, 'depth': 'reasonable', 'depth_score': 1.0, 'rv': 'ok', 'rv_score': 1.0}",Moderate confidence,ML=0.50; Odd/even=consistent; Secondary=weak; Centroid=ok; Depth=reasonable. → Overall score=0.78,"        time                flux        flux_err
+                                                
+-------------------- ------------------ --------
+                 0.0 0.9992604278423327      nan
+0.022518765638031693  1.000285798844259      nan
+0.045037531276063386 0.9996995265275552      nan
+ 0.06755629691409508 1.0006173658049073      nan
+ 0.09007506255212677 1.0000562733825469      nan
+                 ...                ...      ...
+  26.887406171809843 1.0003758729796142      nan
+  26.909924937447872 0.9996287630936919      nan
+  26.932443703085905 0.9998705432743629      nan
+  26.954962468723938   1.00029433917816      nan
+  26.977481234361967 0.9998658288480745      nan
+                27.0 0.9994941230783388      nan
+Length = 1200 rows",
+TIC 276593842,Candidate,4.155193992490613,0.00967330270901519,0.5,0.8,"{'odd_even': 'consistent', 'odd_even_score': 1.0, 'secondary': 'weak', 'secondary_score': 1.0, 'centroid': 'ok', 'centroid_score': 1.0, 'depth': 'reasonable', 'depth_score': 1.0, 'rv': 'ok', 'rv_score': 1.0}",Moderate confidence,ML=0.50; Odd/even=consistent; Secondary=weak; Centroid=ok; Depth=reasonable. → Overall score=0.80,"        time                flux        flux_err
+                                                
+-------------------- ------------------ --------
+                 0.0 0.9993489946796515      nan
+0.022518765638031693 0.9995144454942414      nan
+0.045037531276063386 0.9993162128107843      nan
+ 0.06755629691409508 1.0002452790642378      nan
+ 0.09007506255212677 0.9994367120212446      nan
+                 ...                ...      ...
+  26.887406171809843 0.9993360520195027      nan
+  26.909924937447872 1.0014035826368701      nan
+  26.932443703085905 0.9998150230180709      nan
+  26.954962468723938 1.0003940939267981      nan
+  26.977481234361967 1.0002512089090325      nan
+                27.0 1.0004545262001796      nan
+Length = 1200 rows",
+TIC 392047159,Candidate,4.745932415519399,0.010073324864091215,0.5,0.79,"{'odd_even': 'consistent', 'odd_even_score': 1.0, 'secondary': 'weak', 'secondary_score': 1.0, 'centroid': 'shifted', 'centroid_score': 0.0, 'depth': 'reasonable', 'depth_score': 1.0, 'rv': 'ok', 'rv_score': 1.0}",Moderate confidence,ML=0.50; Odd/even=consistent; Secondary=weak; Centroid=shifted; Depth=reasonable. → Overall score=0.79,"        time                flux        flux_err
+                                                
+-------------------- ------------------ --------
+                 0.0 0.9992078665205684      nan
+0.022518765638031693 0.9994703569569159      nan
+0.045037531276063386 1.0001424019597103      nan
+ 0.06755629691409508 1.0001388939768974      nan
+ 0.09007506255212677 1.0000410987119552      nan
+                 ...                ...      ...
+  26.887406171809843 1.0001739688420288      nan
+  26.909924937447872 0.9996221074903403      nan
+  26.932443703085905 1.0001293549500088      nan
+  26.954962468723938 1.0007105697990537      nan
+  26.977481234361967 1.0009621379506912      nan
+                27.0 1.0001494858303186      nan
+Length = 1200 rows",
+TIC 135902118,Candidate,4.155193992490613,0.009843047646808446,0.5,0.77,"{'odd_even': 'consistent', 'odd_even_score': 1.0, 'secondary': 'weak', 'secondary_score': 1.0, 'centroid': 'shifted', 'centroid_score': 0.0, 'depth': 'reasonable', 'depth_score': 1.0, 'rv': 'ok', 'rv_score': 1.0}",Moderate confidence,ML=0.50; Odd/even=consistent; Secondary=weak; Centroid=shifted; Depth=reasonable. → Overall score=0.77,"        time                flux        flux_err
+                                                
+-------------------- ------------------ --------
+                 0.0 1.0000509360727448      nan
+0.022518765638031693 1.0003096269857468      nan
+0.045037531276063386  0.999477031069813      nan
+ 0.06755629691409508 1.0000689278689892      nan
+ 0.09007506255212677 1.0005769947813647      nan
+                 ...                ...      ...
+  26.887406171809843 0.9998033312525424      nan
+  26.909924937447872 1.0001967438683403      nan
+  26.932443703085905 0.9993598969516458      nan
+  26.954962468723938 0.9998890724252781      nan
+  26.977481234361967   1.00015999217201      nan
+                27.0 1.0003557122355113      nan
+Length = 1200 rows",
+TIC 308472091,Candidate,4.155193992490613,0.010310663692476827,0.5,0.76,"{'odd_even': 'consistent', 'odd_even_score': 1.0, 'secondary': 'weak', 'secondary_score': 1.0, 'centroid': 'shifted', 'centroid_score': 0.0, 'depth': 'reasonable', 'depth_score': 1.0, 'rv': 'ok', 'rv_score': 1.0}",Moderate confidence,ML=0.50; Odd/even=consistent; Secondary=weak; Centroid=shifted; Depth=reasonable. → Overall score=0.76,"        time                flux        flux_err
+                                                
+-------------------- ------------------ --------
+                 0.0 1.0002764664509092      nan
+0.022518765638031693  0.999615621082674      nan
+0.045037531276063386 0.9996702746939053      nan
+ 0.06755629691409508   1.00012060879899      nan
+ 0.09007506255212677  1.000407885840219      nan
+                 ...                ...      ...
+  26.887406171809843 0.9997935242676069      nan
+  26.909924937447872 1.0001306424435408      nan
+  26.932443703085905  1.000094743519863      nan
+  26.954962468723938 0.9999273224120377      nan
+  26.977481234361967 1.0003755605952829      nan
+                27.0 1.0005957006350834      nan
+Length = 1200 rows",
+TIC 119284507,Candidate,3.749061326658323,0.010899937357664861,0.5,0.76,"{'odd_even': 'consistent', 'odd_even_score': 1.0, 'secondary': 'weak', 'secondary_score': 1.0, 'centroid': 'shifted', 'centroid_score': 0.0, 'depth': 'reasonable', 'depth_score': 1.0, 'rv': 'ok', 'rv_score': 1.0}",Moderate confidence,ML=0.50; Odd/even=consistent; Secondary=weak; Centroid=shifted; Depth=reasonable. → Overall score=0.76,"        time                flux        flux_err
+                                                
+-------------------- ------------------ --------
+                 0.0 0.9999624890520454      nan
+0.022518765638031693  1.000338012283118      nan
+0.045037531276063386  0.999423851280023      nan
+ 0.06755629691409508 0.9999727456538648      nan
+ 0.09007506255212677 1.0000744356268603      nan
+                 ...                ...      ...
+  26.887406171809843 1.0001923161065853      nan
+  26.909924937447872 0.9999962876757503      nan
+  26.932443703085905 0.9994069279300828      nan
+  26.954962468723938 0.9995626370628999      nan
+  26.977481234361967 1.0002813794427554      nan
+                27.0 0.9998872589451431      nan
+Length = 1200 rows",
+TIC 219875346,Candidate,2.9737171464330414,0.01008191828319689,0.5,0.77,"{'odd_even': 'consistent', 'odd_even_score': 1.0, 'secondary': 'weak', 'secondary_score': 1.0, 'centroid': 'ok', 'centroid_score': 1.0, 'depth': 'reasonable', 'depth_score': 1.0, 'rv': 'ok', 'rv_score': 1.0}",Moderate confidence,ML=0.50; Odd/even=consistent; Secondary=weak; Centroid=ok; Depth=reasonable. → Overall score=0.77,"        time                flux        flux_err
+                                                
+-------------------- ------------------ --------
+                 0.0 1.0001684695821225      nan
+0.022518765638031693 0.9998733326087341      nan
+0.045037531276063386  1.000054893110314      nan
+ 0.06755629691409508 1.0002063604896818      nan
+ 0.09007506255212677 1.0005337144385986      nan
+                 ...                ...      ...
+  26.887406171809843 1.0007042263804953      nan
+  26.909924937447872 0.9995829097077904      nan
+  26.932443703085905 0.9999398621386462      nan
+  26.954962468723938 1.0006561658499347      nan
+  26.977481234361967  1.000515545740464      nan
+                27.0  1.000233103479945      nan
+Length = 1200 rows",
+TIC 341082739,Candidate,4.672090112640801,0.009954314218802348,0.5,0.79,"{'odd_even': 'consistent', 'odd_even_score': 1.0, 'secondary': 'weak', 'secondary_score': 1.0, 'centroid': 'ok', 'centroid_score': 1.0, 'depth': 'reasonable', 'depth_score': 1.0, 'rv': 'ok', 'rv_score': 1.0}",Moderate confidence,ML=0.50; Odd/even=consistent; Secondary=weak; Centroid=ok; Depth=reasonable. → Overall score=0.79,"        time                flux        flux_err
+                                                
+-------------------- ------------------ --------
+                 0.0 0.9993828357601309      nan
+0.022518765638031693 0.9998849889973863      nan
+0.045037531276063386 0.9996995845824681      nan
+ 0.06755629691409508 0.9990843354402097      nan
+ 0.09007506255212677  0.999640598692284      nan
+                 ...                ...      ...
+  26.887406171809843 1.0000720892070796      nan
+  26.909924937447872  1.000167879829949      nan
+  26.932443703085905 1.0005046488066913      nan
+  26.954962468723938 1.0001674600228923      nan
+  26.977481234361967  1.000117131600804      nan
+                27.0 0.9990243316657903      nan
+Length = 1200 rows",
+TIC 202498061,Candidate,16.44993742177722,0.0009071115120461054,0.5,0.77,"{'odd_even': 'consistent', 'odd_even_score': 1.0, 'secondary': 'weak', 'secondary_score': 1.0, 'centroid': 'ok', 'centroid_score': 1.0, 'depth': 'reasonable', 'depth_score': 1.0, 'rv': 'ok', 'rv_score': 1.0}",Moderate confidence,ML=0.50; Odd/even=consistent; Secondary=weak; Centroid=ok; Depth=reasonable. → Overall score=0.77,"        time                flux        flux_err
+                                                
+-------------------- ------------------ --------
+                 0.0 0.9998162134770001      nan
+0.022518765638031693 1.0005874959980912      nan
+0.045037531276063386 0.9999106053889365      nan
+ 0.06755629691409508 1.0004425100464596      nan
+ 0.09007506255212677 1.0004150577127178      nan
+                 ...                ...      ...
+  26.887406171809843 0.9996461248108104      nan
+  26.909924937447872 1.0001106375489517      nan
+  26.932443703085905 1.0002003234795178      nan
+  26.954962468723938 0.9999153010417926      nan
+  26.977481234361967 1.0005984506139425      nan
+                27.0  1.000705856876669      nan
+Length = 1200 rows",
+TIC 495733120,No Data,,,,,,No LC data,,,0.0
+TIC 199340578,Candidate,12.31476846057572,0.00961454966050629,0.5,0.73,"{'odd_even': 'consistent', 'odd_even_score': 1.0, 'secondary': 'weak', 'secondary_score': 1.0, 'centroid': 'ok', 'centroid_score': 1.0, 'depth': 'reasonable', 'depth_score': 1.0, 'rv': 'ok', 'rv_score': 1.0}",Moderate confidence,ML=0.50; Odd/even=consistent; Secondary=weak; Centroid=ok; Depth=reasonable. → Overall score=0.73,"        time                flux        flux_err
+                                                
+-------------------- ------------------ --------
+                 0.0    1.0000114307764      nan
+0.022518765638031693 1.0003197145790268      nan
+0.045037531276063386 1.0006678708024686      nan
+ 0.06755629691409508  1.000076634405533      nan
+ 0.09007506255212677 0.9999323640767563      nan
+                 ...                ...      ...
+  26.887406171809843 0.9996301281424349      nan
+  26.909924937447872 0.9996774496562173      nan
+  26.932443703085905 0.9997856213084427      nan
+  26.954962468723938 0.9998536849009636      nan
+  26.977481234361967 0.9995451332095511      nan
+                27.0  0.999725932088013      nan
+Length = 1200 rows",
+TIC 172900988,No Data,,,,,,No LC data,,,0.0
+TIC 237913194,Candidate,4.672090112640801,0.009070058094704623,0.5,0.76,"{'odd_even': 'consistent', 'odd_even_score': 1.0, 'secondary': 'weak', 'secondary_score': 1.0, 'centroid': 'ok', 'centroid_score': 1.0, 'depth': 'reasonable', 'depth_score': 1.0, 'rv': 'ok', 'rv_score': 1.0}",Moderate confidence,ML=0.50; Odd/even=consistent; Secondary=weak; Centroid=ok; Depth=reasonable. → Overall score=0.76,"        time                flux        flux_err
+                                                
+-------------------- ------------------ --------
+                 0.0 0.9998102209876228      nan
+0.022518765638031693 1.0003227105154613      nan
+0.045037531276063386 0.9997512227092625      nan
+ 0.06755629691409508 1.0004035934056292      nan
+ 0.09007506255212677  0.999648850691031      nan
+                 ...                ...      ...
+  26.887406171809843  1.000365433689734      nan
+  26.909924937447872 0.9991890895895309      nan
+  26.932443703085905 0.9992003011345852      nan
+  26.954962468723938  1.000634335738597      nan
+  26.977481234361967 0.9994091679082985      nan
+                27.0  0.999895257732487      nan
+Length = 1200 rows",
+TIC 375021884,Candidate,3.6013767209011265,0.008901247074025374,0.5,0.82,"{'odd_even': 'consistent', 'odd_even_score': 1.0, 'secondary': 'weak', 'secondary_score': 1.0, 'centroid': 'ok', 'centroid_score': 1.0, 'depth': 'reasonable', 'depth_score': 1.0, 'rv': 'ok', 'rv_score': 1.0}",Moderate confidence,ML=0.50; Odd/even=consistent; Secondary=weak; Centroid=ok; Depth=reasonable. → Overall score=0.82,"        time                flux        flux_err
+                                                
+-------------------- ------------------ --------
+                 0.0 1.0005023921334868      nan
+0.022518765638031693 0.9999399314363816      nan
+0.045037531276063386 0.9996696474885428      nan
+ 0.06755629691409508 0.9999480732192022      nan
+ 0.09007506255212677 1.0004437274252236      nan
+                 ...                ...      ...
+  26.887406171809843 1.0000984115053062      nan
+  26.909924937447872 0.9995947962231223      nan
+  26.932443703085905 1.0003898383903547      nan
+  26.954962468723938  1.000147874964977      nan
+  26.977481234361967  0.999621948273781      nan
+                27.0 0.9997719058502916      nan
+Length = 1200 rows",
+TIC 4672985,Candidate,4.672090112640801,0.010023526314764476,0.5,0.8,"{'odd_even': 'consistent', 'odd_even_score': 1.0, 'secondary': 'weak', 'secondary_score': 1.0, 'centroid': 'ok', 'centroid_score': 1.0, 'depth': 'reasonable', 'depth_score': 1.0, 'rv': 'ok', 'rv_score': 1.0}",Moderate confidence,ML=0.50; Odd/even=consistent; Secondary=weak; Centroid=ok; Depth=reasonable. → Overall score=0.80,"        time                flux        flux_err
+                                                
+-------------------- ------------------ --------
+                 0.0 1.0004335331415923      nan
+0.022518765638031693  1.001008442223225      nan
+0.045037531276063386 1.0001766548687805      nan
+ 0.06755629691409508 0.9999835684194729      nan
+ 0.09007506255212677 0.9997604296237568      nan
+                 ...                ...      ...
+  26.887406171809843 0.9993611515282054      nan
+  26.909924937447872 1.0005913183575177      nan
+  26.932443703085905  0.999713216767824      nan
+  26.954962468723938 1.0001573922934714      nan
+  26.977481234361967 1.0000381587465914      nan
+                27.0 0.9992870769096042      nan
+Length = 1200 rows",
+TIC 46432937,Candidate,1.644555694618273,0.009915794581822422,0.5,0.78,"{'odd_even': 'consistent', 'odd_even_score': 1.0, 'secondary': 'weak', 'secondary_score': 1.0, 'centroid': 'ok', 'centroid_score': 1.0, 'depth': 'reasonable', 'depth_score': 1.0, 'rv': 'ok', 'rv_score': 1.0}",Moderate confidence,ML=0.50; Odd/even=consistent; Secondary=weak; Centroid=ok; Depth=reasonable. → Overall score=0.78,"        time                flux        flux_err
+                                                
+-------------------- ------------------ --------
+                 0.0 1.0006675581720443      nan
+0.022518765638031693 0.9996539926744391      nan
+0.045037531276063386   1.00062057091866      nan
+ 0.06755629691409508 0.9995719040168137      nan
+ 0.09007506255212677  0.999457761132675      nan
+                 ...                ...      ...
+  26.887406171809843 0.9999906805351509      nan
+  26.909924937447872 1.0008624677737443      nan
+  26.932443703085905 1.0005016567373728      nan
+  26.954962468723938 0.9991716900727465      nan
+  26.977481234361967 0.9999102264345502      nan
+                27.0 0.9994896649513105      nan
+Length = 1200 rows",
+TIC 373924059,Candidate,3.822903629536921,0.009290079795149338,0.5,0.78,"{'odd_even': 'consistent', 'odd_even_score': 1.0, 'secondary': 'weak', 'secondary_score': 1.0, 'centroid': 'ok', 'centroid_score': 1.0, 'depth': 'reasonable', 'depth_score': 1.0, 'rv': 'ok', 'rv_score': 1.0}",Moderate confidence,ML=0.50; Odd/even=consistent; Secondary=weak; Centroid=ok; Depth=reasonable. → Overall score=0.78,"        time                flux        flux_err
+                                                
+-------------------- ------------------ --------
+                 0.0 1.0000523128199739      nan
+0.022518765638031693 0.9999659135081826      nan
+0.045037531276063386 1.0004084689096076      nan
+ 0.06755629691409508 0.9993080568760964      nan
+ 0.09007506255212677 0.9996489969403055      nan
+                 ...                ...      ...
+  26.887406171809843 1.0001419869237176      nan
+  26.909924937447872 0.9996120353409753      nan
+  26.932443703085905 1.0000017696403687      nan
+  26.954962468723938 0.9994310239725058      nan
+  26.977481234361967 1.0006364154788152      nan
+                27.0 0.9995541093887881      nan
+Length = 1200 rows",
