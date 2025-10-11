@@ -15,7 +15,7 @@ By analyzing these periodic brightness variations — known as **light curves** 
 
 
 <video width="640" height="360" controls>
-  <source src="images/transit_method_multiple_planets_4K.mp4" type="video/mp4">
+  <source src="presentations/transit_method_multiple_planets_4K.mp4" type="video/mp4">
 </video>
 
 
@@ -128,7 +128,7 @@ As the star moves toward and away from the observer, its light experiences a **D
 These periodic shifts in the star’s spectral lines indicate the presence of an orbiting planet.
 
 <video width="640" height="360" controls>
-  <source src="images/radial_velocity-1.mp4" type="video/mp4">
+  <source src="presentations/radial_velocity-1.mp4" type="video/mp4">
 </video>
 
 
@@ -225,14 +225,15 @@ $$
 This value helps distinguish **gas giants** from **rocky planets**.
 
 
-## 4. Business Plan
-Our project is not only scientifically grounded but also commercially scalable. We have developed a detailed business plan outlining our user acquisition strategy, monetization model, market positioning, and long-term sustainability.
+## 4. Links to Resources
 
-You can view the full business plan at the following link:
+This project includes supporting materials that complement both the scientific and technical aspects of our work. The resources provide additional context, strategy, and presentation of our findings.  
 
-🔗 [View Business Plan](https://yourdomain.com/business-plan.pdf)
+You can view the resources at the following links:
 
+- 🔗 [Business Plan](https://docs.google.com/document/d/1gx3jaj3RCqlsMDE43eFhbXgLpzUTG5RCYFpLTt2oMXA/edit?usp=sharing)
 
+- 🔗 [Presentation](https://www.canva.com/design/DAG05C_frmI/G0zzf-tF-aK1GzcH6F_Jeg/edit?utm_content=DAG05C_frmI&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
 
 ## 5. Referances
 
@@ -246,6 +247,8 @@ You can view the full business plan at the following link:
 - Lightkurve Python Package – https://docs.lightkurve.org  
 - Astropy: The Astropy Project – https://www.astropy.org  
 - TensorFlow – https://www.tensorflow.org  
+- SIMBAD Astronomical Database – http://simbad.u-strasbg.fr/simbad/  
+- Gaia Mission – https://gea.esac.esa.int/archive/ 
 - Seager, S. & Mallén-Ornelas, G. (2003). “A Unique Solution of Planet and Star Parameters from an Extrasolar Planet Transit Light Curve.”  
      The Astrophysical Journal, 585(2), 1038–1055.  
 - Winn, J. N. (2010). “Exoplanet Transits and Occultations.” In: Seager, S. (Ed.), Exoplanets. University of Arizona Press.
