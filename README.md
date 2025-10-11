@@ -1,4 +1,7 @@
 # Exoplanet Detection via Transit and Radial Velocity Methods
+
+Visit the Exoplanet Observatory – Yggdrasil webpage:
+[exoplanet_detection_yggdrasil](https://exoplanet-detection-yggdrasil.streamlit.app/)
 ## 1. Abstract
 
 This project presents a novel, science-based platform for the automated detection and exploration of exoplanets using data from NASA missions such as **Kepler**, **TESS**, and **K2**. We developed a convolutional neural network (CNN) model trained on light curve data to identify planetary transits with high precision. The model processes data from the NASA Exoplanet Archive, applying preprocessing techniques such as NaN removal, normalization, and detrending to ensure robustness.
@@ -225,34 +228,35 @@ $$
 This value helps distinguish **gas giants** from **rocky planets**.
 
 
-## 4. Links to Resources
+## 4. References
 
-This project includes supporting materials that complement both the scientific and technical aspects of our work. The resources provide additional context, strategy, and presentation of our findings.  
+- NASA Exoplanet Archive – https://exoplanetarchive.ipac.caltech.edu  
+
+- TESS Mission – https://tess.mit.edu  
+- Kepler Mission – https://science.nasa.gov/mission/kepler/
+- MAST Archive (Mikulski Archive for Space Telescopes) – https://mast.stsci.edu  
+- ESO HARPS Radial Velocity Archive – https://www.eso.org/sci/facilities/lasilla/instruments/harps  
+- ExoFOP-TESS (Exoplanet Follow-up Observing Program) –  https://www.ipac.caltech.edu/project/exofop
+- Lightkurve Python Package – https://github.com/lightkurve/lightkurve
+- Astropy: The Astropy Project – https://www.astropy.org  
+- TensorFlow – https://www.tensorflow.org  
+- SIMBAD Astronomical Database – http://simbad.u-strasbg.fr/simbad/  
+- Gaia Mission – https://gea.esac.esa.int/archive/
+- VizieR - https://vizier.unistra.fr/
+- Seager, S. & Mallén-Ornelas, G. (2003). “A Unique Solution of Planet and Star Parameters from an Extrasolar Planet Transit Light Curve.”  
+     The Astrophysical Journal, 585(2), 1038–1055.  
+- Winn, J. N. (2010). “Exoplanet Transits and Occultations.” In: Seager, S. (Ed.), Exoplanets. University of Arizona Press.
+
+
+## 5. Links to Resources
+
+This project includes supporting materials that complement both the scientific and technical aspects of our work. The resources provide additional context, business strategy, and presentation of our findings.  
 
 You can view the resources at the following links:
 
 - 🔗 [Business Plan](https://docs.google.com/document/d/1gx3jaj3RCqlsMDE43eFhbXgLpzUTG5RCYFpLTt2oMXA/edit?usp=sharing)
 
 - 🔗 [Presentation](https://www.canva.com/design/DAG05C_frmI/G0zzf-tF-aK1GzcH6F_Jeg/edit?utm_content=DAG05C_frmI&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
-
-## 5. Referances
-
-- NASA Exoplanet Archive – https://exoplanetarchive.ipac.caltech.edu  
-
-- TESS Mission – https://tess.mit.edu  
-- Kepler Mission – https://keplerscience.arc.nasa.gov  
-- MAST Archive (Mikulski Archive for Space Telescopes) – https://mast.stsci.edu  
-- ESO HARPS Radial Velocity Archive – https://www.eso.org/sci/facilities/lasilla/instruments/harps  
-- ExoFOP-TESS (Exoplanet Follow-up Observing Program) – https://exofop.ipac.caltech.edu/tess  
-- Lightkurve Python Package – https://docs.lightkurve.org  
-- Astropy: The Astropy Project – https://www.astropy.org  
-- TensorFlow – https://www.tensorflow.org  
-- SIMBAD Astronomical Database – http://simbad.u-strasbg.fr/simbad/  
-- Gaia Mission – https://gea.esac.esa.int/archive/ 
-- Seager, S. & Mallén-Ornelas, G. (2003). “A Unique Solution of Planet and Star Parameters from an Extrasolar Planet Transit Light Curve.”  
-     The Astrophysical Journal, 585(2), 1038–1055.  
-- Winn, J. N. (2010). “Exoplanet Transits and Occultations.” In: Seager, S. (Ed.), Exoplanets. University of Arizona Press.
-
 
 
 ## 6. Scientific Impact
