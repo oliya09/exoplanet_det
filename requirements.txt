@@ -1,14 +1,33 @@
+# Core scientific stack
 numpy>=1.21.0
 pandas>=1.3.0
 matplotlib>=3.4.0
+scipy>=1.7.0
+
+# Astronomy libraries
 lightkurve>=2.0.0
 astropy>=5.0.0
 astroquery>=0.4.0
+
+# Machine Learning / AI
 scikit-learn>=1.0.0
 tensorflow>=2.10.0
+torch>=1.12.0
+torchvision>=0.13.0
+
+# Streamlit App
 streamlit>=1.10.0
-reportlab>=3.6.0
 gtts>=2.2.3
+
+# Utility / System / API
+requests>=2.26.0
+joblib>=1.1.0
+
+# Reporting / Documentation
+reportlab>=3.6.0
+
+# Optional but common for data pipelines
+tqdm>=4.62.0
 
 
 
