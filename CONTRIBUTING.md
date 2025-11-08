@@ -1,107 +1,99 @@
-````markdown
 # 🤝 Contributing to ExoVision
 
-Спасибо за интерес к **ExoVision**! 🌌  
-Мы рады любым предложениям — от исправления багов до добавления новых функций и улучшений.
+Thank you for your interest in **ExoVision**! 🌌  
+We welcome all contributions — from bug fixes to new features and improvements.
 
----
 
-## 🚀 Как внести вклад
+## 🚀 How to Contribute
 
-### 1️⃣ Форк репозитория
-Нажмите **Fork** в правом верхнем углу GitHub, чтобы создать свою копию репозитория.
+### 1️⃣ Fork the Repository
+Click **Fork** in the top-right corner of GitHub to create your own copy of the repository.
 
-### 2️⃣ Клонируйте форк
+### 2️⃣ Clone Your Fork
 ```bash
-git clone https://github.com/<ваш_ник>/TIC-id.git
+git clone https://github.com/<your_username>/Tic-id.git
 cd TIC-id
-````
+```
 
-### 3️⃣ Создайте новую ветку
+### 3️⃣ Create a New Branch
 
-Используйте осмысленные названия для веток:
+Use meaningful names for branches:
 
 ```bash
 git checkout -b feature/add-new-planet
 ```
 
-### 4️⃣ Внесите изменения
+### 4️⃣ Make Your Changes
 
-* Соблюдайте структуру кода и стиль проекта.
-* Для фронтенда: **React + TypeScript + Tailwind CSS**.
-* Для бэкенда: **Python 3.11+ + FastAPI**.
-* Следуйте гайдам в [`README.md`](README.md) и документации API [`API`](#📡-api).
+* Follow the existing code structure and style.
+* For the frontend: **React + TypeScript + Tailwind CSS**.
+* For the backend: **Python 3.11+ + FastAPI**.
+* Follow the guidelines in [`README.md`](README.md) and the API documentation [`API`](#📡-api).
 
-### 5️⃣ Коммиты
+### 5️⃣ Commit Your Changes
 
-Используйте понятные сообщения коммитов:
+Use clear and descriptive commit messages:
 
 ```
-feat: добавить поиск по SIMBAD
-fix: исправить отображение орбит
-docs: обновить README
+feat: add SIMBAD search
+fix: correct orbit rendering
+docs: update README
 ```
 
-### 6️⃣ Пуш и Pull Request
+### 6️⃣ Push and Create a Pull Request
 
 ```bash
 git push origin feature/add-new-planet
 ```
 
-Затем создайте **Pull Request (PR)** в основной репозиторий.
-Обязательно добавьте описание изменений и ссылку на issue (если есть).
+Then create a **Pull Request (PR)** to the main repository.  
+Be sure to include a description of your changes and a link to the related issue (if applicable).
 
----
 
-## 🐛 Сообщение об ошибках (Issues)
+## 🐛 Reporting Issues
 
-1. Создайте issue с понятным названием.
-2. Добавьте подробное описание ошибки и шаги воспроизведения.
-3. Прикрепите скриншоты или пример данных, если возможно.
-4. Назначьте метку `bug`.
+1. Create an issue with a clear title.
+2. Add a detailed description and steps to reproduce the problem.
+3. Attach screenshots or example data if possible.
+4. Label it with `bug`.
 
-✅ Пример:
+✅ Example:
 
-* **Название:** Ошибка отображения орбит для Kepler-186 f
-* **Описание:** При просмотре орбиты звезды график не отображается корректно.
+* **Title:** Orbit display error for Kepler-186 f  
+* **Description:** The orbit graph does not render correctly when viewing the star’s orbit.
 
----
 
-## ✨ Предложения новых функций (Feature Requests)
+## ✨ Feature Requests
 
-* Создайте issue с описанием цели и способа реализации.
-* Добавьте макеты или схемы, если есть.
-* Подождите обратной связи от команды перед разработкой.
+* Create an issue describing your goal and proposed implementation.
+* Include mockups or diagrams if available.
+* Wait for feedback from the team before starting development.
 
----
 
-## 📦 Стиль кода
+## 📦 Code Style
 
-| Язык             | Стандарты                                           |
-| ---------------- | --------------------------------------------------- |
-| Python           | PEP8, форматирование через `black`                  |
-| TypeScript/React | Prettier, ESLint                                    |
-| Комментарии      | На английском или русском, понятные и информативные |
+| Language          | Standards                                           |
+| ----------------- | --------------------------------------------------- |
+| Python            | PEP8, formatted with `black`                        |
+| TypeScript/React  | Prettier, ESLint                                    |
+| Comments          | In English or Russian, clear and informative        |
 
----
 
-## ✅ Чек-лист перед Pull Request
+## ✅ Pull Request Checklist
 
-* [✅] Код протестирован и работает локально
-* [✅] Коммиты осмысленные и структурированные
-* [✅] Обновлена документация, если были изменения в функционале
-* [✅] PR привязан к соответствующему issue (если есть)
-* [✅] Соблюдены стандарты кодирования и стиля
+* [✅] Code has been tested and works locally  
+* [✅] Commits are meaningful and well-structured  
+* [✅] Documentation updated if functionality changed  
+* [✅] PR linked to the corresponding issue (if any)  
+* [✅] Coding standards and style conventions followed  
 
----
 
-## 💡 Контакты
+## 💡 Contacts
 
-Если есть вопросы по архитектуре или AI-анализу:
+For questions about architecture or AI analysis:
 
-* Telegram: [@Pumpkin2008](https://t.me/@Pumpkin2008)
+* Telegram: [@Pumpkin2008](https://t.me/@Pumpkin2008)  
 * GitHub: [@root3315](https://github.com/root3315)
 
----
 
-> **ExoVision** — не просто каталог. Это инструмент для будущих колонизаторов и исследователей космоса. 🌌
+> **ExoVision** — not just a catalog. It’s a tool for future colonizers and explorers of space. 🌌
